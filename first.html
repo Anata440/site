@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZombYLanD Shop</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/ic.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="https://discord.com/invite/fNSfyKjN" target="_blank" class="discord-button">
+            <img src="#discord" alt="Discord"><a href="https://vk.com/zombylandhardpve" target="_blank"
+                class="vk-button">
+                <img src="#vk" alt="vk">
+
+            </a>
+    </header>
+    <nav class="nav-menu">
+        <button class="nav-button" onclick="scrollToSection('automobiles')">Автомобили</button>
+        <button class="nav-button" onclick="scrollToSection('others')">Предметы</button>
+        <button class="nav-button" onclick="scrollToSection('weapons')">Оружие</button>
+
+
+    </nav>
+
+
+    <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buyModalLabel">Как купить</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Ваш контент модального окна здесь -->
+                    <p>Реквизиты:</p>
+                    <p>Карта Sberbank: 2202200816793630 - Михаил Павлович К.
+                        Яндекс Кошелёк: money.yandex.ru/to/410015304819146
+                        Qiwi Кошелёк: +79207034315
+                        Система Быстрых Платежей (СБП): +79207034315</p>
+                    <p>После оплаты свяжитесь с любым из наших администраторов в дискорде для выдачи товара.</p>
+                    <p>К каждой купленной вещи в магазине игрок получает 3 страховки, страховки бессрочные, вещи
+                        утерянные в следствии багов
+                        сервера восстанавливаются без сгорания страховки.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="automobiles" class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ДОЗОР-Б.jpg" class="card-img-top img-fluid w-100" alt="Car Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Дозор</h5>
+                        <p class="card-text">Цена: 1700 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/6+6.jpg" class="card-img-top img-fluid w-100" alt="Car Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Mercedes-Benz G-Класс AMG 6x6</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/wrangler.jpg" class="card-img-top img-fluid w-100" alt="Car Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Jeep Wrangler</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ШАМАН.jpg" class="card-img-top img-fluid w-100" alt="Car Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Шаман</h5>
+                        <p class="card-text">Цена: 2700 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/РЕНДЖ РОВЕР.jpg" class="card-img-top img-fluid w-100" alt="Car Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Range Rover</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ПЕРЕХВАТЧИК.jpg" class="card-img-top img-fluid w-100" alt="Car Image 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Ford Falcon XB GT Coupe</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/КРУЗАК 200.jpg" class="card-img-top img-fluid w-100" alt="Car Image 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Land Cruiser 200</h5>
+                        <p class="card-text">Цена: 1700 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ПАЗ БАНДИТ.jpg" class="card-img-top img-fluid w-100" alt="Car Image 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Паз бандит</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/СКАУТ.jpg" class="card-img-top img-fluid w-100" alt="Car Image 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Scout</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ТАЙОТА ХАЙЛЮКС.jpg" class="card-img-top img-fluid w-100" alt="Car Image 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Hilux</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Audi RS6.jpg" class="card-img-top img-fluid w-100" alt="Car Image 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Audi RS6</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/BMW X5.jpg" class="card-img-top img-fluid w-100" alt="Car Image 12">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW X5</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/BMW.jpg" class="card-img-top img-fluid w-100" alt="Car Image 13">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW</h5>
+                        <p class="card-text">Цена: 1700 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Chevrolet Corvette.jpg" class="card-img-top img-fluid w-100" alt="Car Image 14">
+                    <div class="card-body">
+                        <h5 class="card-title">Chevrolet Corvette</h5>
+                        <p class="card-text">Цена: 2100 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Citroen 2CV.jpg" class="card-img-top img-fluid w-100" alt="Car Image 15">
+                    <div class="card-body">
+                        <h5 class="card-title">Citroen 2CV</h5>
+                        <p class="card-text">Цена: 1500 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/СКАУТ.jpg" class="card-img-top img-fluid w-100" alt="Car Image 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Scout</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ТАЙОТА ХАЙЛЮКС.jpg" class="card-img-top img-fluid w-100" alt="Car Image 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Hilux</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Audi RS6.jpg" class="card-img-top img-fluid w-100" alt="Car Image 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Audi RS6</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/BMW X5.jpg" class="card-img-top img-fluid w-100" alt="Car Image 12">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW X5</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/BMW.jpg" class="card-img-top img-fluid w-100" alt="Car Image 13">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW</h5>
+                        <p class="card-text">Цена: 1700 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Chevrolet Corvette.jpg" class="card-img-top img-fluid w-100" alt="Car Image 14">
+                    <div class="card-body">
+                        <h5 class="card-title">Chevrolet Corvette</h5>
+                        <p class="card-text">Цена: 2100 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Citroen 2CV.jpg" class="card-img-top img-fluid w-100" alt="Car Image 15">
+                    <div class="card-body">
+                        <h5 class="card-title">Citroen 2CV</h5>
+                        <p class="card-text">Цена: 1500 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/CONQUEROR.jpg" class="card-img-top img-fluid w-100" alt="Car Image 16">
+                    <div class="card-body">
+                        <h5 class="card-title">CONQUEROR</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/COUGAR.jpg" class="card-img-top img-fluid w-100" alt="Car Image 17">
+                    <div class="card-body">
+                        <h5 class="card-title">Cougar</h5>
+                        <p class="card-text">Цена: 2100 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/G65 Гелик.jpg" class="card-img-top img-fluid w-100" alt="Car Image 18">
+                    <div class="card-body">
+                        <h5 class="card-title">G65</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Land Rover Defender 110 .jpg" class="card-img-top img-fluid w-100" alt="Car Image 19">
+                    <div class="card-body">
+                        <h5 class="card-title">Land Rover Defender 110</h5>
+                        <p class="card-text">Цена: 1900 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Mercedes-Benz W140.jpg" class="card-img-top img-fluid w-100" alt="Car Image 20">
+                    <div class="card-body">
+                        <h5 class="card-title">Mercedes-Benz W140</h5>
+                        <p class="card-text">Цена: 1800 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/MUSTANG .jpg" class="card-img-top img-fluid w-100" alt="Car Image 21">
+                    <div class="card-body">
+                        <h5 class="card-title">Mustang</h5>
+                        <p class="card-text">Цена: 1600 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Nissan Warrior .jpg" class="card-img-top img-fluid w-100" alt="Car Image 22">
+                    <div class="card-body">
+                        <h5 class="card-title">Nissan Warrior</h5>
+                        <p class="card-text">Цена: 1800 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/OPEL ASTRA.jpg" class="card-img-top img-fluid w-100" alt="Car Image 23">
+                    <div class="card-body">
+                        <h5 class="card-title">Opel Astra</h5>
+                        <p class="card-text">Цена: 1800 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Range Rover.jpg" class="card-img-top img-fluid w-100" alt="Car Image 24">
+                    <div class="card-body">
+                        <h5 class="card-title">Range Rover</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ROVER.jpg" class="card-img-top img-fluid w-100" alt="Car Image 25">
+                    <div class="card-body">
+                        <h5 class="card-title">Rover</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/SUV.jpg" class="card-img-top img-fluid w-100" alt="Car Image 26">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW X5</h5>
+                        <p class="card-text">Цена: 1600 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/Toyota Land Cruiser 100.jpg" class="card-img-top img-fluid w-100" alt="Car Image 27">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Land Cruiser 100</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/wrangler.jpg" class="card-img-top img-fluid w-100" alt="Car Image 28">
+                    <div class="card-body">
+                        <h5 class="card-title">Wrangler</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ФЕННЕК.jpg" class="card-img-top img-fluid w-100" alt="Car Image 29">
+                    <div class="card-body">
+                        <h5 class="card-title">Fennek</h5>
+                        <p class="card-text">Цена: 1900 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+
+    <section id="others" class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/кейсОруж.jpg" class="card-img-top img-fluid w-100" alt="Others Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Кейс оружейный</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/кейсМед.jpg" class="card-img-top img-fluid w-100" alt="Others Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Кейс для медикаментов</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/кейсОдежда.jpg" class="card-img-top img-fluid w-100" alt="Others Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Кейс для оружия</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/кейсПатр.jpg" class="card-img-top img-fluid w-100" alt="Others Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Кейс для патронов</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/кейсВсе.jpg" class="card-img-top img-fluid w-100" alt="Others Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Кейс для всего</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/сумка.jpg" class="card-img-top img-fluid w-100" alt="Others Image 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Сумка для денег</h5>
+                        <p class="card-text">Цена: 2000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="weapons" class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/аллигатор.jpg" class="card-img-top img-fluid w-100" alt="weapons Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Аллигатор</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/выхлоп.jpg" class="card-img-top img-fluid w-100" alt="weapons Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Выхлоп</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/баррет.jpg" class="card-img-top img-fluid w-100" alt="weapons Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Баррет</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/М300.jpg" class="card-img-top img-fluid w-100" alt="weapons Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">М300</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/страннаяВинтовка.jpg" class="card-img-top img-fluid w-100" alt="weapons Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Странная винтовка</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/печенег.jpg" class="card-img-top img-fluid w-100" alt="weapons Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Печенег</h5>
+                        <p class="card-text">Цена: 1000 руб.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#buyModal">Купить</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>До новых встреч, Скитальцы!</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Кнопка для возвращения наверх страницы -->
+    <button id="backToTopBtn" onclick="scrollToTop()" title="Вверх">&#9650;</button>
+</body>
+
+</html>
