@@ -23,3 +23,31 @@ function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+document.addEventListener('DOMContentLoaded', function () {
+    // Включаем/выключаем кнопку в зависимости от валидности формы
+    var registrationForm = document.getElementById('registrationForm');
+    var registrationBtn = document.getElementById('registrationBtn');
+
+    registrationForm.addEventListener('input', function () {
+        registrationBtn.disabled = !registrationForm.checkValidity();
+    });
+});
+function validateForm(event) {
+    event.preventDefault();
+
+    // Получаем значения из формы
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Простая проверка пароля
+    if (password !== confirmPassword) {
+        alert("Пароли не совпадают");
+        return;
+    }
+
+    // TODO: Отправить данные на сервер для регистрации
+
+    alert("Регистрация успешна!");
+}

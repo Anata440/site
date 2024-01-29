@@ -6,6 +6,12 @@ body {
     padding: 0;
     height: 100%;
 }
+
+.registration-button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    /* Другие стили по вашему выбору */
+}
 header {
     background-color: #333;
     background-image: url("img/ZombYLanD-21-11-2023.png");
@@ -21,7 +27,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 0px 0; /* Уменьшаем верхний и нижний отступ */
+    padding: 10px 10px; /* Уменьшаем верхний и нижний отступ */
     width: 100%;
     bottom: 0;
 }
@@ -117,10 +123,12 @@ footer {
     cursor: pointer;
     margin: 0 10px;
     transition: background-color 0.3s ease-in-out;
+    border-radius: 10px; /* Задайте значение радиуса, которое вам подходит */
 }
 
 .nav-button:hover {
     background-color: #555;
+    
 }
 #backToTopBtn {
     display: none;
@@ -153,3 +161,5 @@ footer {
     z-index: 99998;
     background-color: rgba(0,0,0,0.3);
 }
+/* styles.css */
+

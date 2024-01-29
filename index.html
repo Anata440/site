@@ -9,18 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/ic.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <header>
-        <a href="https://discord.com/invite/fNSfyKjN" target="_blank" class="discord-button">
-            <img src="#discord" alt="Discord"><a href="https://vk.com/zombylandhardpve" target="_blank"
-                class="vk-button">
-                <img src="#vk" alt="vk">
 
-            </a>
     </header>
     <nav class="nav-menu">
         <button class="nav-button" onclick="scrollToSection('automobiles')">Автомобили</button>
@@ -30,6 +24,63 @@
 
     </nav>
 
+<!-- Контейнер для центрирования кнопки -->
+<div class="d-flex align-items-center justify-content-center vh-1">
+    <!-- Кнопка для регистрации -->
+    <button class="btn btn-primary registration-button" data-bs-toggle="modal"
+        data-bs-target="#registrationModal">Зарегистрироваться</button>
+</div>
+<!-- Модальное окно -->
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Форма регистрации -->
+                <form action="db.php" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя пользователя:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pass" class="form-label">Пароль:</label>
+                        <input type="password" class="form-control" id="pass" name="pass" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Собираем данные формы
+        var formData = new FormData(this);
+
+        // Отправляем данные на сервер
+        fetch('process_registration.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Обработка ответа от сервера (можно добавить сообщение об успешной регистрации или ошибке)
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    });
+</script>
 
     <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel"
         aria-hidden="true">
@@ -594,13 +645,20 @@
 
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>До новых встреч, Скитальцы!</p>
+        <a href="https://discord.com/invite/fNSfyKjN" target="_blank" class="discord-button">
+            <img src="#discord" alt="Discord"><a href="https://vk.com/zombylandhardpve" target="_blank" class="vk-button">
+                <img src="#vk" alt="vk">
+        
+            </a>
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <!-- Кнопка для возвращения наверх страницы -->
     <button id="backToTopBtn" onclick="scrollToTop()" title="Вверх">&#9650;</button>
+
 </body>
 
 </html>
