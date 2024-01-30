@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZombYLanD Shop</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/ic.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -40,18 +40,18 @@
             </div>
             <div class="modal-body">
                 <!-- Форма регистрации -->
-                <form action="db.php" method="post">
+                <form action="register.php" method="post">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Имя пользователя:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <label for="username" class="form-label">Имя пользователя:</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="text" class="form-control" id="email" name="email" required>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="pass" class="form-label">Пароль:</label>
-                        <input type="password" class="form-control" id="pass" name="pass" required>
+                        <label for="password" class="form-label">Пароль:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                 </form>
